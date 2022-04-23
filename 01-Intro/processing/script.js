@@ -1,17 +1,42 @@
-const WIDTH = 800;
-const HEIGHT = 800;
+
+const SIZE = 400;
 
 function sketch(processing){
 
     processing.setup = function(){
       processing.frameRate(2); // fps
-		  processing.size(WIDTH, HEIGHT);
+		  processing.size(SIZE, SIZE);
     }
     processing.drawGame = function(world){
       processing.background(255,255,200);
 
       processing.strokeWeight(4);  // Default
-      processing.line(600, 80, 640, 300);
+
+      processing.point(200, 200); // origen
+
+      /* 
+      processing.line (0,SIZE/2,SIZE,SIZE/2);//linea horizontal
+      processing.line (SIZE/2,0,SIZE/2,SIZE);// linea vertical
+       */
+
+      /* cubo con primitivas */
+  
+      processing.line(200, 200, 300, 200);
+      processing.line(200, 300, 300, 300);
+      processing.line(200, 200, 200, 300);
+      processing.line(300, 200, 300, 300);
+
+      processing.line(150, 150, 250, 150);
+      processing.line(150, 250, 250, 250);
+      processing.line(150, 150, 150, 250);
+      processing.line(250, 150, 250, 250);
+
+      processing.line(150, 150, 200, 200);
+      processing.line(150, 250, 200, 300);
+      processing.line(250, 250, 300, 300);
+      processing.line(250, 150, 300, 200);
+
+     /*  processing.line(600, 80, 640, 300);
 
       processing.ellipse(420, 320, 30, 30);
       
@@ -39,7 +64,7 @@ function sketch(processing){
       processing.point(p2, p4);
       processing.point(p3, p1); 
       processing.point(p4, p2);
-      processing.point(p4, p4);
+      processing.point(p4, p4); */
 
 
     }
